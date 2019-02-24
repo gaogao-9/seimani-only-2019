@@ -1,0 +1,46 @@
+{
+  "name": "seimani-only-2019",
+  "version": "1.0.0",
+  "description": "政剣マニフェスティアオンリーイベント2019公式サイトです",
+  "author": "がお",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "npm run lint -- --fix",
+    "precommit": "npm run lintfix"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^2.6.0",
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0",
+    "vue-global-events": "^1.1.0",
+    "vuetify": "^1.5.0",
+    "vuetify-loader": "^1.2.0",
+    "vuex-persistedstate": "^2.5.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^0.0.1",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^5.0.1",
+    "eslint-config-standard": ">=12.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": ">=2.14.0",
+    "eslint-plugin-jest": ">=21.24.1",
+    "eslint-plugin-node": ">=7.0.1",
+    "eslint-plugin-promise": ">=4.0.1",
+    "eslint-plugin-standard": ">=4.0.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "nodemon": "^1.18.9",
+    "postcss-calc": "^7.0.1",
+    "postcss-css-variables": "^0.12.0",
+    "postcss-nested": "^4.1.1",
+    "postcss-scss": "^2.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}
