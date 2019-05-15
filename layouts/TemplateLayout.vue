@@ -148,7 +148,7 @@ export default {
 
 .header {
   .headerLink, .headerButton {
-    color: #ffffff;
+    color: #ffffff !important;
   }
 }
 
