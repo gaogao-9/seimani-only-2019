@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <v-layout>
-      <v-flex xs12 sm10 offset-sm1>
+    <v-layout justify-center>
+      <v-flex xs12 sm10 md8>
         <v-card>
           <v-container class="headline">
             主催メンバー
@@ -40,7 +40,7 @@ import Layout from "@/layouts/DefaultLayout";
 
 export default {
   head: {
-    title: "スタッフ",
+    title: "スタッフ一覧",
   },
   components: {
     Layout,

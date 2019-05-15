@@ -1,8 +1,8 @@
 const VuetifyLoaderPlugin = require("vuetify-loader/lib/plugin");
 
 const shared = {
-  title: "政剣マニフェスティアオンリーイベント 2019 公式サイト",
-  description: "政剣マニフェスティアオンリーイベント 2019の公式サイトです",
+  title: "政剣マニフェスティアオンリー同人誌即売会 緊急交流イベント 漕ぎ出せ！ソクバイ海Ⅱ 〜帰ってきちゃって、アイムソウリー！ 公式サイト",
+  description: "政剣マニフェスティアオンリー同人誌即売会 緊急交流イベント 漕ぎ出せ！ソクバイ海Ⅱ 〜帰ってきちゃって、アイムソウリー！の公式サイトです",
   image: "ogp_icon.jpg",
   favicon: "favicon.ico",
   origin: (process.env.NODE_ENV === "develop") ? `http://localhost${(process.env.PORT ? `:${process.env.PORT}` : "3000")}/` : "https://festia.moe/",
@@ -17,8 +17,8 @@ module.exports = {
   head: {
     title: "",
     titleTemplate(subTitle) {
-      const title = "政剣マニフェスティアオンリーイベント 2019 公式サイト";
-      return (subTitle) ? `${subTitle} - ${title}` : title;
+      const title = "政剣マニフェスティアオンリー同人誌即売会 緊急交流イベント 漕ぎ出せ！ソクバイ海Ⅱ 〜帰ってきちゃって、アイムソウリー！ 公式サイト";
+      return (subTitle) ? `${subTitle} | ${title}` : title;
     },
     meta: [
       { charset: "utf-8" },
@@ -46,29 +46,15 @@ module.exports = {
       },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Noto+Sans+JP&text=%E3%81%82%E3%81%AE%E6%84%9F%E5%8B%95%E3%82%92%E3%82%82%E3%81%86%E4%B8%80%E5%BA%A6",
+        href: "https://fonts.googleapis.com/css?family=Montserrat:400,700",
       },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:700&text=%E6%94%BF%E5%89%A3%E3%83%9E%E3%83%8B%E3%83%95%E3%82%A7%E3%82%B9%E3%83%86%E3%82%A3%E3%82%A2%E3%82%AA%E3%83%B3%E3%83%AA%E3%83%BC%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%202019",
-      },
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&text=%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81",
+        href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700",
       },
       {
         rel: "preload",
-        href:
-          "/assets/img/flyer_bg.jpg",
-        as: "image",
-      },
-      {
-        rel: "preload",
-        href:
-          "/assets/img/flyer_c0.png",
+        href: "/assets/img/top.png",
         as: "image",
       },
     ],
@@ -84,6 +70,7 @@ module.exports = {
   */
   css: [
     "~/assets/style/app.styl",
+    "~/assets/style/base.css",
   ],
 
   /*
@@ -143,9 +130,16 @@ module.exports = {
     postcss: {
       syntax: "postcss-scss",
       plugins: {
+        "postcss-for": {},
+        "postcss-functions": {
+          functions: {
+            round: (num, pre=0) => (+num).toFixed(pre),
+            join: (...args) => args.join(""),
+          }
+        },
         "postcss-nested": {},
         "postcss-css-variables": {},
-        "postcss-calc": {},
+        "postcss-calc": { selectors: true },
       },
     },
   },

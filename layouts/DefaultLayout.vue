@@ -1,8 +1,6 @@
 <template>
   <Layout v-bind="$attrs" v-on="$listeners">
-    <v-container>
-      <slot />
-    </v-container>
+    <slot />
   </Layout>
 </template>
 
