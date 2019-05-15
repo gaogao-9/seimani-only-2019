@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
 export default {
   components: {
@@ -133,7 +133,7 @@ export default {
 
   &-enter {
     opacity: 0;
-    transform: translate(0) scale(0.9);
+    transform: scale(0.9);
 
     .footer {
       opacity: 0;
@@ -142,7 +142,7 @@ export default {
 
   &-leave-to {
     opacity: 0;
-    transform: translate(0, 0) scale(0.9);
+    transform: scale(0.9);
   }
 }
 

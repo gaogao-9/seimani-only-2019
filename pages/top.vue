@@ -2,7 +2,7 @@
   <Layout>
     <div :class="$style.charaContainer">
       <v-img
-        :class="$style.hirari"
+        :class="[$style.chara, $style.hirari]"
         src="/assets/img/chara/hirari.png"
         :aspect-ratio="200/255"
         width="20vw"
@@ -11,7 +11,7 @@
         max-width="200px"
         max-height="255px" />
       <v-img
-        :class="$style.syerobu"
+        :class="[$style.chara, $style.syerobu]"
         src="/assets/img/chara/syerobu.png"
         :aspect-ratio="200/246"
         width="20vw"
@@ -69,17 +69,17 @@ export default {
   z-index: 114514810;
   pointer-events: none;
 
-  & > * {
+  & > .chara {
     display: block;
     overflow: visible;
     position: absolute;
     transform-origin: center center;
 
-    &:nth-of-type(1) {
+    &.hirari {
       animation: hovering_hirari 3s linear 0s infinite alternate;
     }
 
-    &:nth-of-type(2) {
+    &.syerobu {
       animation: hovering_syerobu 3s linear 0s infinite alternate;
     }
 

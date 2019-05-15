@@ -143,4 +143,7 @@ module.exports = {
       },
     },
   },
+  workbox: {
+    dev: true,
+  },
 };
