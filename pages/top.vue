@@ -74,41 +74,68 @@ export default {
     overflow: visible;
     position: absolute;
     transform-origin: center center;
+    transition: left 0.5s ease;
 
     &.hirari {
+      left: 50vw;
       animation: hovering_hirari 3s linear 0s infinite alternate;
+
+      @media screen and (min-width: 960px) {
+        & {
+          left: 115px;
+        }
+      }
+
+      @media screen and (min-width: 1264px) {
+        & {
+          left: 225px;
+        }
+      }
     }
 
     &.syerobu {
+      left: -50vw;
       animation: hovering_syerobu 3s linear 0s infinite alternate;
+
+      @media screen and (min-width: 960px) {
+        & {
+          left: -495px;
+        }
+      }
+
+      @media screen and (min-width: 1264px) {
+        & {
+          left: -630px;
+        }
+      }
     }
 
     @keyframes hovering_hirari {
       0% {
-        transform: translate(calc(-100% + 50vw), calc(-100% + 50vh)) rotate(-2deg);
+        transform: translate(calc(-100%), calc(-100% + 50vh)) rotate(-2deg);
         animation-timing-function: ease-in;
       }
       50% {
-        transform: translate(calc(-100% + 50vw), calc(-100% + 40vh)) rotate(2deg);
+        transform: translate(calc(-100%), calc(-100% + 40vh)) rotate(2deg);
         animation-timing-function: ease-out;
       }
       100% {
-        transform: translate(calc(-100% + 50vw), calc(-100% + 30vh)) rotate(-2deg);
+        transform: translate(calc(-100%), calc(-100% + 30vh)) rotate(-2deg);
         animation-timing-function: ease-in;
       }
     }
 
     @keyframes hovering_syerobu {
       0% {
-        transform: translate(-50vw, -50vh) rotate(2deg);
+        transform: translate(0, -50vh) rotate(2deg);
         animation-timing-function: ease-in;
       }
       50% {
-        transform: translate(-50vw, -40vh) rotate(-2deg);
+        transform: translate(0, -40vh) rotate(-2deg);
         animation-timing-function: ease-out;
       }
       100% {
-        transform: translate(-50vw, -30vh) rotate(2deg);
+        transform: translate(0, -30vh) rotate(2deg);
         animation-timing-function: ease-in;
       }
     }
