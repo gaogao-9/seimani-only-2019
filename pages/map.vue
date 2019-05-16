@@ -48,21 +48,21 @@
                 <v-list two-line>
                   <v-list-tile>
                     <v-list-tile-content>
-                      <v-list-tile-title>新宿/東京方面の人</v-list-tile-title>
-                      <v-list-tile-sub-title>⇒新宿線がおすすめです。</v-list-tile-sub-title>
+                      <v-list-tile-title>新宿/多摩方面の人</v-list-tile-title>
+                      <v-list-tile-sub-title>⇒都営新宿線がおすすめです。</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                   <v-divider />
                   <v-list-tile>
                     <v-list-tile-content>
                       <v-list-tile-title>品川/横浜方面の人</v-list-tile-title>
-                      <v-list-tile-sub-title>⇒京急線(直通浅草線)がおすすめです。</v-list-tile-sub-title>
+                      <v-list-tile-sub-title>⇒京急線(浅草線直通)がおすすめです。</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                   <v-divider />
                   <v-list-tile>
                     <v-list-tile-content>
-                      <v-list-tile-title>上野/赤羽方面の人</v-list-tile-title>
+                      <v-list-tile-title>上野/赤羽/北千住方面の人</v-list-tile-title>
                       <v-list-tile-sub-title>⇒日比谷線がおすすめです。</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
