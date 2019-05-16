@@ -79,58 +79,6 @@
           </v-layout>
         </v-card>
       </v-flex>
-      <v-flex xs12 sm10 offset-sm1 md12 offset-md0>
-        <v-card>
-          <v-layout justify-center align-center row wrap>
-            <v-flex xs10>
-              <v-card-title>
-                <h2 class="headline" :class="$style.header">
-                  4階レイアウト(メイン会場)
-                </h2>
-              </v-card-title>
-            </v-flex>
-            <v-flex xs10>
-              <a href="/assets/img/map/layout_4f.png" target="_blank">
-                <v-img
-                  src="/assets/img/map/layout_4f.png"
-                  :aspect-ratio="580/441"
-                  max-height="500px"
-                  contain
-                  class="grey lighten-2" />
-              </a>
-            </v-flex>
-            <v-flex offset-xs1>
-              <v-card-text>公式サイトによる案内は<a href="http://www.mensyou.co.jp/floor4-annai.htm" target="_blank">こちら</a></v-card-text>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </v-flex>
-      <v-flex xs12 sm10 offset-sm1 md12 offset-md0>
-        <v-card>
-          <v-layout justify-center align-center row wrap>
-            <v-flex xs10>
-              <v-card-title>
-                <h2 class="headline" :class="$style.header">
-                  1階レイアウト(サブ会場)
-                </h2>
-              </v-card-title>
-            </v-flex>
-            <v-flex xs10>
-              <a href="/assets/img/map/layout_4f.png" target="_blank">
-                <v-img
-                  src="/assets/img/map/layout_1f.png"
-                  :aspect-ratio="580/441"
-                  max-height="500px"
-                  contain
-                  class="grey lighten-2" />
-              </a>
-            </v-flex>
-            <v-flex offset-xs1>
-              <v-card-text>公式サイトによる案内は<a href="http://www.mensyou.co.jp/floor1-annai.htm" target="_blank">こちら</a></v-card-text>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </v-flex>
     </v-layout>
   </Layout>
 </template>
