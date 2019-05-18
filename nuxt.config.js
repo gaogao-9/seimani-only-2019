@@ -20,6 +20,9 @@ module.exports = {
       const title = "政剣マニフェスティアオンリー同人誌即売会 緊急交流イベント 漕ぎ出せ！ソクバイ海Ⅱ 〜帰ってきちゃって、アイムソウリー！ 公式サイト";
       return (subTitle) ? `${subTitle} | ${title}` : title;
     },
+    htmlAttrs: {
+      lang: "ja"
+    },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
