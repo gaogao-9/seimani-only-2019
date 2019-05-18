@@ -90,6 +90,11 @@ export default {
           title: "スタッフ一覧",
           to: "/staff/",
         },
+        {
+          icon: "help",
+          title: "Q&A",
+          to: "/question/",
+        },
       ],
     };
   },
