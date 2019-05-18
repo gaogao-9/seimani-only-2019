@@ -11,7 +11,7 @@
             </v-flex>
             <v-flex xs12 md6 offset-md0 justify-center align-center>
               <v-card-text>
-                <iframe :class="$style.map" frameborder="0" src="https://www.google.com/maps/embed/v1/directions?origin=%E9%A6%AC%E5%96%B0%E6%A8%AA%E5%B1%B1&destination=%E7%B6%BF%E5%95%86%E4%BC%9A%E9%A4%A8&mode=walking&zoom=17&key=AIzaSyAAaCUU3jjAQggZTpe8AE_6DQxQ6TP8cLA" allowfullscreen style="border:0" />
+                <iframe :class="$style.map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ72ldClKJGGARtnxJr7Xybg4&zoom=17&key=AIzaSyAAaCUU3jjAQggZTpe8AE_6DQxQ6TP8cLA" allowfullscreen style="border:0" />
               </v-card-text>
             </v-flex>
             <v-flex xs10 sm8 md5 offset-xs1 offset-sm2 offset-md1>
