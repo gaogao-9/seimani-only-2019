@@ -21,7 +21,7 @@ module.exports = {
       return (subTitle) ? `${subTitle} | ${title}` : title;
     },
     htmlAttrs: {
-      lang: "ja"
+      lang: "ja",
     },
     meta: [
       { charset: "utf-8" },
@@ -134,11 +134,12 @@ module.exports = {
       syntax: "postcss-scss",
       plugins: {
         "postcss-for": {},
+        "postcss-each": {},
         "postcss-functions": {
           functions: {
-            round: (num, pre=0) => (+num).toFixed(pre),
+            round: (num, pre = 0) => (+num).toFixed(pre),
             join: (...args) => args.join(""),
-          }
+          },
         },
         "postcss-nested": {},
         "postcss-css-variables": {},
