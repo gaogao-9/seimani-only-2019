@@ -1,7 +1,43 @@
 <template>
   <Layout>
-    <v-layout align-center row wrap :class="$style.cards">
-      <v-flex v-for="({subtitle, list}, questionIndex) in qa" :key="questionIndex" xs12 sm10 offset-sm1 md12 offset-md0>
+    <v-layout justify-center align-center row wrap :class="$style.cards">
+      <v-flex xs12 sm11>
+        <v-card>
+          <v-layout justify-center align-center wrap>
+            <v-flex xs12>
+              <v-card-title class="display-1">
+                {{ introduction.subtitle }}
+              </v-card-title>
+              <v-card-text>
+                <div v-for="(talkBlock, talkBlockIndex) in introduction.list" :key="talkBlockIndex">
+                  <Talk v-for="({chara, icon, text}, talkIndex) in talkBlock"
+                        :key="talkIndex"
+                        :chara="chara"
+                        :emotion="icon">
+                    <span v-html="text" />
+                  </Talk>
+                </div>
+              </v-card-text>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 sm11>
+        <v-card>
+          <v-layout justify-center align-center wrap>
+            <v-flex v-for="({subtitle, list}, subtitleIndex) in linkList" :key="subtitleIndex" xs12>
+              <v-card-title class="display-1">
+                {{ subtitle }}
+              </v-card-title>
+              <v-card-text v-for="(text, listIndex) in list" :key="listIndex">
+                <a :href="`#${encodeURIComponent(text)}`">{{ text }}
+                </a>
+              </v-card-text>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </v-flex>
+      <v-flex v-for="({subtitle, list}, questionIndex) in qa" :key="questionIndex" xs12 sm11>
         <v-card>
           <v-layout justify-center align-center wrap>
             <v-flex xs12>
@@ -10,6 +46,7 @@
               </v-card-title>
               <v-card-text>
                 <div v-for="(talkBlock, talkBlockIndex) in list" :key="talkBlockIndex">
+                  <span :id="encodeURIComponent(talkBlock[0].text)" />
                   <Talk v-for="({chara, icon, text}, talkIndex) in talkBlock"
                         :key="talkIndex"
                         :chara="chara"
@@ -40,8 +77,7 @@ export default {
   },
   data() {
     return {
-
-      qa: [
+      introduction:
         {
           subtitle: "マクシーンの　おしえて！マージョリー先生",
           list: [
@@ -69,6 +105,7 @@ export default {
             ],
           ],
         },
+      qa: [
         {
           subtitle: "イベントについて",
           list: [
@@ -429,6 +466,14 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    linkList() {
+      return this.qa.map(({ subtitle, list }) => ({
+        subtitle,
+        list: list.map((x) => x[0].text),
+      }));
+    },
   },
 };
 </script>
