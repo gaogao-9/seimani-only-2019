@@ -51,6 +51,13 @@ export default {
       script: [
         { src: "https://platform.twitter.com/widgets.js", defer: true },
       ],
+      link: [
+        {
+          rel: "preload",
+          href: "/assets/img/top.png",
+          as: "image",
+        },
+      ],
     };
   },
   components: {
@@ -77,6 +84,7 @@ export default {
     transition: left 0.5s ease;
 
     &.hirari {
+      top: 50vh;
       left: 50vw;
       animation: hovering_hirari 3s linear 0s infinite alternate;
 
@@ -94,6 +102,7 @@ export default {
     }
 
     &.syerobu {
+      top: -50vh;
       left: -50vw;
       animation: hovering_syerobu 3s linear 0s infinite alternate;
 
@@ -112,30 +121,30 @@ export default {
 
     @keyframes hovering_hirari {
       0% {
-        transform: translate(calc(-100%), calc(-100% + 50vh)) rotate(-2deg);
+        transform: translate(calc(-100%), calc(-100% - 20vh)) rotate(-2deg);
         animation-timing-function: ease-in;
       }
       50% {
-        transform: translate(calc(-100%), calc(-100% + 40vh)) rotate(2deg);
+        transform: translate(calc(-100%), calc(-100% - 10vh)) rotate(2deg);
         animation-timing-function: ease-out;
       }
       100% {
-        transform: translate(calc(-100%), calc(-100% + 30vh)) rotate(-2deg);
+        transform: translate(calc(-100%), calc(-100% - 0vh)) rotate(-2deg);
         animation-timing-function: ease-in;
       }
     }
 
     @keyframes hovering_syerobu {
       0% {
-        transform: translate(0, -50vh) rotate(2deg);
+        transform: translate(0, 20vh) rotate(2deg);
         animation-timing-function: ease-in;
       }
       50% {
-        transform: translate(0, -40vh) rotate(-2deg);
+        transform: translate(0, 10vh) rotate(-2deg);
         animation-timing-function: ease-out;
       }
       100% {
-        transform: translate(0, -30vh) rotate(2deg);
+        transform: translate(0, 0vh) rotate(2deg);
         animation-timing-function: ease-in;
       }
     }
