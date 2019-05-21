@@ -13,7 +13,9 @@
                   <Talk v-for="({chara, icon, text}, talkIndex) in talkBlock"
                         :key="talkIndex"
                         :chara="chara"
-                        :emotion="icon">
+                        :emotion="icon"
+                        :class="$style.talk">
+                    <!-- eslint-disable-next-line vue/no-v-html -->
                     <span v-html="text" />
                   </Talk>
                 </div>
@@ -25,13 +27,21 @@
       <v-flex xs12 sm11>
         <v-card>
           <v-layout justify-center align-center wrap>
-            <v-flex v-for="({subtitle, list}, subtitleIndex) in linkList" :key="subtitleIndex" xs12>
+            <v-flex xs12>
               <v-card-title class="display-1">
+                Q&amp;A一覧
+              </v-card-title>
+            </v-flex>
+            <v-flex v-for="({subtitle, list}, subtitleIndex) in linkList" :key="subtitleIndex" xs12>
+              <v-card-title class="headline">
                 {{ subtitle }}
               </v-card-title>
-              <v-card-text v-for="(text, listIndex) in list" :key="listIndex">
-                <a :href="`#${encodeURIComponent(text)}`">{{ text }}
-                </a>
+              <v-card-text>
+                <ul :class="$style.linkList">
+                  <li v-for="(text, listIndex) in list" :key="listIndex" :class="$style.linkListItem">
+                    <a :href="`#${encodeURIComponent(text)}`">{{ text }}</a>
+                  </li>
+                </ul>
               </v-card-text>
             </v-flex>
           </v-layout>
@@ -46,11 +56,13 @@
               </v-card-title>
               <v-card-text>
                 <div v-for="(talkBlock, talkBlockIndex) in list" :key="talkBlockIndex">
-                  <span :id="encodeURIComponent(talkBlock[0].text)" />
+                  <span :id="encodeURIComponent(talkBlock[0].text)" :class="$style.linkTarget" />
                   <Talk v-for="({chara, icon, text}, talkIndex) in talkBlock"
                         :key="talkIndex"
                         :chara="chara"
-                        :emotion="icon">
+                        :emotion="icon"
+                        :class="$style.talk">
+                    <!-- eslint-disable-next-line vue/no-v-html -->
                     <span v-html="text" />
                   </Talk>
                 </div>
@@ -481,22 +493,36 @@ export default {
 <style module>
 .cards {
   & > * {
-  padding: 10px 0;
+    padding: 10px 0;
   }
-}
 
-.map {
-  width: 100%;
-  height: 400px;
+  .linkList {
+    margin-left: 1em;
+    line-height: 2;
 
-  @media screen and (min-width:960px) {
-    & {
-      height: 500px;
+    .linkListItem {
+
     }
   }
-}
 
-.header {
-  margin: 0 auto;
+  .linkTarget {
+    display: block;
+    height: 35px;
+  }
+
+  .talk {
+    margin: 10px 30px;
+
+    @media screen and (max-width:599px) {
+      & {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
 }
 </style>

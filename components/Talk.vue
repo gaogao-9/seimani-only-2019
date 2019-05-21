@@ -1,5 +1,5 @@
 <template functional>
-  <div v-bind="data.attrs" :class="$style.wrapper" v-on="listeners">
+  <div v-bind="data.attrs" :class="[$style.wrapper, ...(Array.isArray(data.class) ? data.class : [data.class])]" v-on="listeners">
     <component :is="props.components.Face"
                v-if="(props.chara === 'maxine')"
                :chara="props.chara"
