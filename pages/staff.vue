@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <v-layout justify-center>
-      <v-flex xs12 sm10 md8>
+      <v-flex xs12 sm10 md8 lg6>
         <v-card>
           <v-container class="headline">
             主催メンバー

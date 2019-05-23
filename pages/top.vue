@@ -99,6 +99,12 @@ export default {
           left: 225px;
         }
       }
+
+      @media screen and (min-width: 1904px) {
+        & {
+          left: 270px;
+        }
+      }
     }
 
     &.syerobu {
@@ -115,6 +121,12 @@ export default {
       @media screen and (min-width: 1264px) {
         & {
           left: -630px;
+        }
+      }
+
+      @media screen and (min-width: 1904px) {
+        & {
+          left: -950px;
         }
       }
     }

@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <v-layout justify-center align-center row wrap :class="$style.cards">
-      <v-flex xs12>
+      <v-flex xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center row wrap>
             <v-flex xs10>
@@ -152,7 +152,7 @@
           </v-layout>
         </v-card>
       </v-flex>
-      <v-flex xs12>
+      <v-flex xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center row wrap>
             <v-flex xs10>
@@ -189,6 +189,20 @@
           </v-layout>
         </v-card>
       </v-flex>
+      <v-flex xs12 sm11 lg9>
+        <v-card>
+          <v-layout justify-center align-center row wrap>
+            <v-flex xs10>
+              <v-card-text>
+                <v-checkbox v-model="isRead" block ripple label="以上の内容を熟読しました。" />
+                <v-btn color="success" :disabled="!isRead" block round ripple large target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdQvAO4IzVp-1LDVgHnNdN4QvNNy5ezFmjWN8naOYua0PWh2Q/viewform">
+                  サークル参加する
+                </v-btn>
+              </v-card-text>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </v-flex>
     </v-layout>
   </Layout>
 </template>
@@ -202,6 +216,11 @@ export default {
   },
   components: {
     Layout,
+  },
+  data() {
+    return {
+      isRead: false,
+    };
   },
 };
 </script>

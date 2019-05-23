@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <v-layout justify-center align-center row wrap :class="$style.cards">
-      <v-flex xs12 sm11>
+      <v-flex xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center wrap>
             <v-flex xs12>
@@ -24,7 +24,7 @@
           </v-layout>
         </v-card>
       </v-flex>
-      <v-flex xs12 sm11>
+      <v-flex xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center wrap>
             <v-flex xs12>
@@ -47,7 +47,7 @@
           </v-layout>
         </v-card>
       </v-flex>
-      <v-flex v-for="({subtitle, list}, questionIndex) in qa" :key="questionIndex" xs12 sm11>
+      <v-flex v-for="({subtitle, list}, questionIndex) in qa" :key="questionIndex" xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center wrap>
             <v-flex xs12>

@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <v-layout justify-center align-center row wrap :class="$style.cards">
-      <v-flex xs12>
+      <v-flex xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center row wrap>
             <v-flex xs10>
