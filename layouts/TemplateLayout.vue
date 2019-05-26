@@ -36,7 +36,7 @@
       <Footer>
         <span>政剣マニフェスティアオンリーイベント</span>
         &nbsp;
-        <span>選挙管理委員会</span>
+        <span>戦挙管理委員会</span>
       </Footer>
     </v-footer>
   </v-app>
