@@ -194,10 +194,13 @@
           <v-layout justify-center align-center row wrap>
             <v-flex xs10>
               <v-card-text>
-                <v-checkbox v-model="isRead" block ripple label="以上の内容を熟読しました。" />
-                <v-btn color="success" :disabled="!isRead" block round ripple large target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdQvAO4IzVp-1LDVgHnNdN4QvNNy5ezFmjWN8naOYua0PWh2Q/viewform">
+                <v-checkbox block ripple label="以上の内容を熟読しました。" disabled />
+                <v-btn color="success" disabled block round ripple large target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdQvAO4IzVp-1LDVgHnNdN4QvNNy5ezFmjWN8naOYua0PWh2Q/viewform">
                   サークル参加する
                 </v-btn>
+              </v-card-text>
+              <v-card-text>
+                参加受付を終了しました。
               </v-card-text>
             </v-flex>
           </v-layout>
