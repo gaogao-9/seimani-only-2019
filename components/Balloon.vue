@@ -10,14 +10,14 @@ export default {
     color: {
       type: String,
       required: true,
-      validator(value) {
+      validator (value) {
         return ["red", "blue"].includes(value);
       },
     },
     from: {
       type: String,
       required: true,
-      validator(value) {
+      validator (value) {
         return ["left", "right"].includes(value);
       },
     },

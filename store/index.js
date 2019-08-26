@@ -3,19 +3,19 @@ export const state = {
 };
 
 export const getters = {
-  initialAnimated({ initialAnimated }) {
+  initialAnimated ({ initialAnimated }) {
     return initialAnimated;
   },
 };
 
 export const mutations = {
-  initialAnimated(state, value) {
+  initialAnimated (state, value) {
     state.initialAnimated = value;
   },
 };
 
 export const actions = {
-  finishTopPageAnimation({ commit }) {
+  finishTopPageAnimation ({ commit }) {
     commit("initialAnimated", true);
   },
 };

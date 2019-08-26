@@ -129,7 +129,7 @@ export default {
       required: true,
     },
   },
-  data() {
+  data () {
     return {
       state: 0,
       pathObject: {
@@ -176,7 +176,7 @@ export default {
       ],
     };
   },
-  async mounted() {
+  async mounted () {
     this.state = 1;
     await this.$pe.delay(9000);
     this.state = 2;
@@ -195,7 +195,7 @@ export default {
   },
   methods: {
     // いい感じのベジエ曲線の座標を作るやつ
-    generateBezierLines(r, n) {
+    generateBezierLines (r, n) {
       const result = [];
 
       for (let i = 0; i < n; ++i) {
@@ -207,7 +207,7 @@ export default {
       return result;
     },
     // 回転行列
-    rotatePoint(x, y, d) {
+    rotatePoint (x, y, d) {
       const rad = Math.PI / 180 * d;
 
       const x2 = x * Math.cos(rad) - y * Math.sin(rad);

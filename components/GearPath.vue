@@ -12,7 +12,7 @@ export default {
   props: {
     path: {
       type: Object,
-      default() {
+      default () {
         return {};
       },
     },

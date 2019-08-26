@@ -27,20 +27,20 @@ export default {
     chara: {
       type: String,
       required: true,
-      validator(value) {
+      validator (value) {
         return ["maxine", "marjorie"].includes(value);
       },
     },
     emotion: {
       type: String,
       default: "default",
-      validator(value) {
+      validator (value) {
         return ["default", "sad", "sad2", "smile", "smile2", "thinking", "panic"].includes(value);
       },
     },
     components: {
       type: Object,
-      default() {
+      default () {
         return {
           Face,
           Balloon,

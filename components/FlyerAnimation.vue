@@ -54,7 +54,7 @@ export default {
       required: true,
     },
   },
-  data() {
+  data () {
     return {
       isShow: false,
       charas: [
@@ -92,12 +92,12 @@ export default {
     };
   },
   watch: {
-    start() {
+    start () {
       this.tickIsShow();
     },
   },
   methods: {
-    async tickIsShow() {
+    async tickIsShow () {
       await this.$pe.delay(100);
 
       this.isShow = true;

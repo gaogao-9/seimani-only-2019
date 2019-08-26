@@ -45,7 +45,7 @@ export default {
   components: {
     Layout,
   },
-  data() {
+  data () {
     return {
       staff: {
         core: [

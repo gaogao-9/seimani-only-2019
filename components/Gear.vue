@@ -25,15 +25,15 @@ export default {
     },
   },
   computed: {
-    durationStyle() {
+    durationStyle () {
       return this.floatingStyle("duration");
     },
-    delayStyle() {
+    delayStyle () {
       return this.floatingStyle("delay");
     },
   },
   methods: {
-    floatingStyle(name) {
+    floatingStyle (name) {
       const index = (+this[name]).toFixed(1).replace(".", "-");
       return this.$style[`${name}${index}`];
     },

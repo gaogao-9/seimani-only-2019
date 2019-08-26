@@ -46,7 +46,7 @@
 import Layout from "@/layouts/TopLayout";
 
 export default {
-  head() {
+  head () {
     return {
       script: [
         { src: "https://platform.twitter.com/widgets.js", defer: true },

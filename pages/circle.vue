@@ -220,7 +220,7 @@ export default {
   components: {
     Layout,
   },
-  data() {
+  data () {
     return {
       isRead: false,
     };

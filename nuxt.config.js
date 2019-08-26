@@ -16,7 +16,7 @@ module.exports = {
   */
   head: {
     title: "",
-    titleTemplate(subTitle) {
+    titleTemplate (subTitle) {
       const title = "政剣マニフェスティアオンリー同人誌即売会 緊急交流イベント 漕ぎ出せ！ソクバイ海Ⅱ 〜帰ってきちゃって、アイムソウリー！ 公式サイト";
       return (subTitle) ? `${subTitle} | ${title}` : title;
     },
@@ -110,7 +110,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

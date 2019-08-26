@@ -87,7 +87,7 @@ export default {
     Layout,
     Talk,
   },
-  data() {
+  data () {
     return {
       introduction:
         {
@@ -480,7 +480,7 @@ export default {
     };
   },
   computed: {
-    linkList() {
+    linkList () {
       return this.qa.map(({ subtitle, list }) => ({
         subtitle,
         list: list.map((x) => x[0].text),

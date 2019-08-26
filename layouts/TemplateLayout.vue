@@ -56,7 +56,7 @@ export default {
       default: "light",
     },
   },
-  data() {
+  data () {
     return {
       drawer: false,
       items: [
@@ -99,7 +99,7 @@ export default {
     };
   },
   computed: {
-    isDark() {
+    isDark () {
       return this.theme === "dark";
     },
   },
