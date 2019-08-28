@@ -16,6 +16,47 @@ import Layout from "@/layouts/IntroLayout";
 import GearPath from "@/components/GearPath";
 
 export default {
+  head () {
+    return {
+      link: [
+        {
+          rel: "preload",
+          href: "/assets/img/flyer/bg.jpg",
+          as: "image",
+        },
+        {
+          rel: "preload",
+          href: "/assets/img/flyer/colis.png",
+          as: "image",
+        },
+        {
+          rel: "preload",
+          href: "/assets/img/flyer/dia.png",
+          as: "image",
+        },
+        {
+          rel: "preload",
+          href: "/assets/img/flyer/jozefin.png",
+          as: "image",
+        },
+        {
+          rel: "preload",
+          href: "/assets/img/flyer/tina.png",
+          as: "image",
+        },
+        {
+          rel: "preload",
+          href: "/assets/img/flyer/fine.png",
+          as: "image",
+        },
+        {
+          rel: "preload",
+          href: "/assets/img/top.jpg",
+          as: "image",
+        },
+      ],
+    };
+  },
   components: {
     Layout,
     GearPath,
