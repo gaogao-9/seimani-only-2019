@@ -98,9 +98,6 @@ import Layout from "@/layouts/TopLayout";
 export default {
   head () {
     return {
-      script: [
-        { src: "https://platform.twitter.com/widgets.js", defer: true },
-      ],
       link: [
         {
           rel: "preload",
@@ -142,6 +139,16 @@ export default {
   },
   components: {
     Layout,
+  },
+  async mounted () {
+    await new Promise((r) => setTimeout(r, 2000));
+
+    if (process.browser) {
+      const $script = document.createElement("script");
+
+      $script.setAttribute("src", "https://platform.twitter.com/widgets.js");
+      document.body.appendChild($script);
+    }
   },
 };
 </script>
