@@ -22,13 +22,63 @@
     </div>
     <v-layout justify-space-around align-center wrap>
       <v-flex xs11 sm8 md6>
-        <v-img
-          src="/assets/img/top.png"
-          aspect-ratio="1"
-          min-width="290"
-          contain
-          class="grey lighten-2"
-          :class="$style.banner" />
+        <div :class="$style.flyerContainer">
+          <v-img
+            src="/assets/img/top.jpg"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="grey lighten-2" />
+          <v-img
+            src="/assets/img/flyer/bg.jpg"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="grey lighten-2"
+            :class="[$style.flyerElement, $style.bg]" />
+          <v-img
+            src="/assets/img/flyer/colis.png"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="transparent lighten-2"
+            :class="[$style.flyerElement, $style.colis]" />
+          <v-img
+            src="/assets/img/flyer/dia.png"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="transparent lighten-2"
+            :class="[$style.flyerElement, $style.dia]" />
+          <v-img
+            src="/assets/img/flyer/jozefin.png"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="transparent lighten-2"
+            :class="[$style.flyerElement, $style.jozefin]" />
+          <v-img
+            src="/assets/img/flyer/tina.png"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="transparent lighten-2"
+            :class="[$style.flyerElement, $style.tina]" />
+          <v-img
+            src="/assets/img/flyer/fine.png"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="transparent lighten-2"
+            :class="[$style.flyerElement, $style.fine]" />
+          <v-img
+            src="/assets/img/flyer/white.png"
+            :aspect-ratio="2894/4093"
+            min-width="290"
+            contain
+            class="white lighten-2"
+            :class="[$style.flyerElement, $style.white]" />
+        </div>
       </v-flex>
       <v-flex xs11 sm11 md4 lg3>
         <v-layout justify-space-around align-center>
@@ -54,7 +104,7 @@ export default {
       link: [
         {
           rel: "preload",
-          href: "/assets/img/top.png",
+          href: "/assets/img/top.jpg",
           as: "image",
         },
       ],
@@ -163,8 +213,155 @@ export default {
   }
 }
 
-.banner {
-  margin: 0 auto;
+.flyerContainer {
+  position: relative;
+  min-width: 290px;
+  overflow: hidden;
+
+  & > .flyerElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    &.bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: bg 2.1s cubic-bezier(0, 0, 0.68, 1.37) 0s 1 normal both;
+    }
+
+    &.colis {
+      z-index: 10;
+      animation: front 2.1s cubic-bezier(0, 0, 0.68, 1.37) 0s 1 normal both;
+    }
+
+    &.dia {
+      z-index: 8;
+      animation: front 1.8s cubic-bezier(0, 0, 0.68, 1.37) 0.3s 1 normal both;
+    }
+
+    &.jozefin {
+      z-index: 4;
+      animation: front 1.5s cubic-bezier(0, 0, 0.68, 1.37) 0.6s 1 normal both;
+    }
+
+    &.tina {
+      z-index: 2;
+      transform-origin: 8.98% 100%;
+      animation: tina 1.6s ease 0.5s 1 normal both;
+    }
+
+    &.fine {
+      z-index: 0;
+      transform-origin: 86.73% 46.65%;
+      animation: fine 1.6s ease 0.5s 1 normal both;
+    }
+
+    &.white {
+      z-index: 20;
+      opacity: 0;
+      animation: whiteout 5s ease 2s 1 normal forwards;
+    }
+  }
+
+  @keyframes bg {
+    0% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  @keyframes front {
+    0% {
+      opacity: 0;
+      transform: translate(0, -5%);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(0, 0%);
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  @keyframes tina {
+    0% {
+      z-index: 10;
+      transform: translate(-10%, -5%) rotateZ(-20deg) rotateY(90deg) scale(1);
+        animation-timing-function: ease-in;
+    }
+    25% {
+      transform: translate(-5%, -2.5%) rotateZ(-10deg) rotateY(45deg) scale(1.2);
+        animation-timing-function: ease-out;
+    }
+    50% {
+      z-index: 2;
+      transform: translate(0%, 0%) rotateZ(0deg) rotateY(0deg) scale(1);
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  @keyframes fine {
+    0% {
+      opacity: 0;
+      transform: translate(10%, -10%) rotateZ(-2deg);
+    }
+    10% {
+      transform: translate(8%, -8%) rotateZ(2deg);
+    }
+    20% {
+      transform: translate(6%, -6%) rotateZ(-2deg);
+    }
+    30% {
+      transform: translate(4%, -4%) rotateZ(2deg);
+    }
+    40% {
+      transform: translate(2%, -2%) rotateZ(-1deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(0%, 0%) rotateZ(0deg);
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  @keyframes whiteout {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
 }
 
 :global(.twitter) {

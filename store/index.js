@@ -1,6 +1,6 @@
-export const state = {
+export const state = () => ({
   initialAnimated: false,
-};
+});
 
 export const getters = {
   initialAnimated ({ initialAnimated }) {
