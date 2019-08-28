@@ -28,6 +28,7 @@ export default {
 }
 
 .contentWrapper {
-  padding: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 </style>
