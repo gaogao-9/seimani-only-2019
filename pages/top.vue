@@ -29,55 +29,13 @@
             min-width="290"
             contain
             class="grey lighten-2" />
-          <v-img
-            src="/assets/img/flyer/bg.jpg"
-            :aspect-ratio="2894/4093"
-            min-width="290"
-            contain
-            class="grey lighten-2"
-            :class="[$style.flyerElement, $style.bg]" />
-          <v-img
-            src="/assets/img/flyer/colis.png"
-            :aspect-ratio="2894/4093"
-            min-width="290"
-            contain
-            class="transparent lighten-2"
-            :class="[$style.flyerElement, $style.colis]" />
-          <v-img
-            src="/assets/img/flyer/dia.png"
-            :aspect-ratio="2894/4093"
-            min-width="290"
-            contain
-            class="transparent lighten-2"
-            :class="[$style.flyerElement, $style.dia]" />
-          <v-img
-            src="/assets/img/flyer/jozefin.png"
-            :aspect-ratio="2894/4093"
-            min-width="290"
-            contain
-            class="transparent lighten-2"
-            :class="[$style.flyerElement, $style.jozefin]" />
-          <v-img
-            src="/assets/img/flyer/tina.png"
-            :aspect-ratio="2894/4093"
-            min-width="290"
-            contain
-            class="transparent lighten-2"
-            :class="[$style.flyerElement, $style.tina]" />
-          <v-img
-            src="/assets/img/flyer/fine.png"
-            :aspect-ratio="2894/4093"
-            min-width="290"
-            contain
-            class="transparent lighten-2"
-            :class="[$style.flyerElement, $style.fine]" />
-          <v-img
-            src="/assets/img/flyer/white.png"
-            :aspect-ratio="2894/4093"
-            min-width="290"
-            contain
-            class="white lighten-2"
-            :class="[$style.flyerElement, $style.white]" />
+          <img src="/assets/img/flyer/bg.jpg" :class="[$style.flyerElement, $style.bg]">
+          <img src="/assets/img/flyer/colis.png" :class="[$style.flyerElement, $style.colis]">
+          <img src="/assets/img/flyer/dia.png" :class="[$style.flyerElement, $style.dia]">
+          <img src="/assets/img/flyer/jozefin.png" :class="[$style.flyerElement, $style.jozefin]">
+          <img src="/assets/img/flyer/tina.png" :class="[$style.flyerElement, $style.tina]">
+          <img src="/assets/img/flyer/fine.png" :class="[$style.flyerElement, $style.fine]">
+          <img src="/assets/img/flyer/white.png" :class="[$style.flyerElement, $style.white]">
         </div>
       </v-flex>
       <v-flex xs11 sm11 md4 lg3>
