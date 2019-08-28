@@ -69,7 +69,7 @@ export default {
   computed: {
     pathAttrs () {
       return {
-        "data-delay": 50,
+        "data-delay": 10,
         "data-duration": 100,
         fill: "none",
         stroke: "#d2b316",
