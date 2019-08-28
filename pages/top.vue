@@ -222,6 +222,7 @@ export default {
   position: relative;
   min-width: 290px;
   overflow: hidden;
+  z-index: 0;
 
   & > .flyerElement {
     position: absolute;
