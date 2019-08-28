@@ -139,7 +139,7 @@
 </template>
 
 <script>
-import Layout from "@/layouts/TopLayout";
+import Layout from "@/layouts/DefaultLayout";
 
 export default {
   head: {

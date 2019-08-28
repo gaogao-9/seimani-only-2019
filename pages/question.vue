@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import Layout from "@/layouts/TopLayout";
+import Layout from "@/layouts/DefaultLayout";
 import Talk from "@/components/Talk";
 
 export default {

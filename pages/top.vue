@@ -125,6 +125,16 @@ export default {
   left: 50%;
   z-index: 114514810;
   pointer-events: none;
+  animation: showCharacter 0.5s ease 2s 1 normal both;
+
+  @keyframes showCharacter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   & > .chara {
     display: block;
