@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <v-layout justify-center align-center row wrap :class="$style.cards">
-      <v-flex xs12 sm10 md11 lg10>
+      <v-flex xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center wrap>
             <v-flex xs12>
@@ -9,16 +9,16 @@
                 会場情報
               </v-card-title>
             </v-flex>
-            <v-flex xs12 md6 offset-md0 justify-center align-center>
+            <v-flex xs12 md7 lg8 xl8 justify-center align-center>
               <v-card-text>
                 <iframe :class="$style.map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ72ldClKJGGARtnxJr7Xybg4&zoom=17&key=AIzaSyAAaCUU3jjAQggZTpe8AE_6DQxQ6TP8cLA" allowfullscreen style="border:0" />
               </v-card-text>
             </v-flex>
-            <v-flex xs10 sm8 md5 offset-xs1 offset-sm2 offset-md1>
-              <h2 class="headline">
-                交通手段
-              </h2>
+            <v-flex xs12 md5 lg4 xl3>
               <v-card-text>
+                <h2 class="headline">
+                  交通手段
+                </h2>
                 <div><v-icon>pin_drop</v-icon>会場: 綿商会館 4階＆1階</div>
                 <div><v-icon>watch</v-icon>日程: 2019年9月22日(日)</div>
                 <br>
@@ -33,7 +33,7 @@
           </v-layout>
         </v-card>
       </v-flex>
-      <v-flex xs12 sm10 md11 lg10>
+      <v-flex xs12 sm11 lg9>
         <v-card>
           <v-layout justify-center align-center row wrap>
             <v-flex xs10>
@@ -74,6 +74,51 @@
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
+              </v-card-text>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </v-flex>
+    </v-layout>
+    <v-layout justify-center align-center row wrap :class="$style.cards">
+      <v-flex xs12 sm11 lg9>
+        <v-card>
+          <v-layout justify-center align-center row wrap>
+            <v-flex xs12>
+              <v-card-title>
+                <h2 class="headline" :class="$style.header">
+                  会場MAP
+                </h2>
+              </v-card-title>
+            </v-flex>
+            <v-flex xs12 sm11 md9 lg5>
+              <h3 class="title" />
+              <v-card-text>
+                <v-hover>
+                  <v-card slot-scope="{ hover }" flat nuxt href="/assets/img/map/layout_4f.jpg" target="_blank" :elevation="hover ? 5 : 0">
+                    <v-img
+                      src="/assets/img/map/layout_4f.jpg"
+                      :aspect-ratio="1024/768"
+                      min-width="290"
+                      contain
+                      class="grey lighten-2" />
+                  </v-card>
+                </v-hover>
+              </v-card-text>
+            </v-flex>
+            <v-flex xs12 sm11 md9 lg5>
+              <h3 class="title" />
+              <v-card-text>
+                <v-hover>
+                  <v-card slot-scope="{ hover }" flat nuxt href="/assets/img/map/layout_1f.jpg" target="_blank" :elevation="hover ? 5 : 0">
+                    <v-img
+                      src="/assets/img/map/layout_1f.jpg"
+                      :aspect-ratio="1024/768"
+                      min-width="290"
+                      contain
+                      class="grey lighten-2" />
+                  </v-card>
+                </v-hover>
               </v-card-text>
             </v-flex>
           </v-layout>

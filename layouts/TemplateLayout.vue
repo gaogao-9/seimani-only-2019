@@ -86,6 +86,11 @@ export default {
           to: "/cosplay/",
         },
         {
+          icon: "assignment_ind",
+          title: "サークル一覧",
+          to: "/circlelist/",
+        },
+        {
           icon: "supervised_user_circle",
           title: "スタッフ一覧",
           to: "/staff/",
