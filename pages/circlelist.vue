@@ -45,10 +45,10 @@
               <h3 class="title" />
               <v-card-text>
                 <v-hover>
-                  <v-card slot-scope="{ hover }" flat nuxt href="/assets/img/map/circlemap.png" target="_blank" :elevation="hover ? 5 : 0">
+                  <v-card slot-scope="{ hover }" flat nuxt href="/assets/img/map/circlemap.jpg" target="_blank" :elevation="hover ? 5 : 0">
                     <v-img
-                      src="/assets/img/map/circlemap.png"
-                      :aspect-ratio="517/523"
+                      src="/assets/img/map/circlemap.jpg"
+                      :aspect-ratio="5600/5680"
                       min-width="290"
                       contain
                       class="grey lighten-2" />
