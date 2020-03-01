@@ -5,7 +5,7 @@ const shared = {
   description: "政剣マニフェスティアオンリー同人誌即売会 緊急交流イベント 漕ぎ出せ！ソクバイ海Ⅱ 〜帰ってきちゃって、アイムソウリー！の公式サイトです",
   image: "ogp_icon.jpg",
   favicon: "favicon.ico",
-  origin: (process.env.NODE_ENV === "develop") ? `http://localhost${(process.env.PORT ? `:${process.env.PORT}` : "3000")}/` : "https://festia.moe/",
+  origin: (process.env.NODE_ENV === "develop") ? `http://localhost${(process.env.PORT ? `:${process.env.PORT}` : "3000")}/` : "https://only2019.festia.moe/",
 };
 
 module.exports = {
