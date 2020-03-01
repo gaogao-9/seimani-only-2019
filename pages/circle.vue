@@ -214,9 +214,6 @@
 import Layout from "@/layouts/DefaultLayout";
 
 export default {
-  head: {
-    title: "サークル参加",
-  },
   components: {
     Layout,
   },
@@ -224,6 +221,9 @@ export default {
     return {
       isRead: false,
     };
+  },
+  head: {
+    title: "サークル参加",
   },
 };
 </script>

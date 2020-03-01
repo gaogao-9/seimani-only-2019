@@ -132,11 +132,11 @@
 import Layout from "@/layouts/DefaultLayout";
 
 export default {
-  head: {
-    title: "会場情報",
-  },
   components: {
     Layout,
+  },
+  head: {
+    title: "会場情報",
   },
 };
 </script>

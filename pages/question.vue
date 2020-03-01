@@ -80,9 +80,6 @@ import Layout from "@/layouts/DefaultLayout";
 import Talk from "@/components/Talk";
 
 export default {
-  head: {
-    title: "会場情報",
-  },
   components: {
     Layout,
     Talk,
@@ -486,6 +483,9 @@ export default {
         list: list.map((x) => x[0].text),
       }));
     },
+  },
+  head: {
+    title: "会場情報",
   },
 };
 </script>

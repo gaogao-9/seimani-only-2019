@@ -125,11 +125,11 @@
 import Layout from "@/layouts/DefaultLayout";
 
 export default {
-  head: {
-    title: "コスプレ参加",
-  },
   components: {
     Layout,
+  },
+  head: {
+    title: "コスプレ参加",
   },
 };
 </script>

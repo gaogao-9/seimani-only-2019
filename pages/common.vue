@@ -153,11 +153,11 @@
 import Layout from "@/layouts/DefaultLayout";
 
 export default {
-  head: {
-    title: "参加者全般",
-  },
   components: {
     Layout,
+  },
+  head: {
+    title: "参加者全般",
   },
 };
 </script>

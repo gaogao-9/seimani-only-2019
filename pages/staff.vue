@@ -48,9 +48,6 @@
 import Layout from "@/layouts/DefaultLayout";
 
 export default {
-  head: {
-    title: "スタッフ一覧",
-  },
   components: {
     Layout,
   },
@@ -77,6 +74,9 @@ export default {
         ],
       },
     };
+  },
+  head: {
+    title: "スタッフ一覧",
   },
 };
 </script>

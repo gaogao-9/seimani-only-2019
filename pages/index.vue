@@ -16,6 +16,34 @@ import Layout from "@/layouts/IntroLayout";
 import GearPath from "@/components/GearPath";
 
 export default {
+  components: {
+    Layout,
+    GearPath,
+  },
+  data () {
+    return {
+      showText: false,
+    };
+  },
+  computed: {
+    pathAttrs () {
+      return {
+        "data-delay": 10,
+        "data-duration": 100,
+        fill: "none",
+        stroke: "#d2b316",
+      };
+    },
+  },
+  methods: {
+    async onCompleteGearPathAnimation () {
+      this.showText = true;
+
+      await new Promise((r) => setTimeout(r, 1300));
+
+      this.$router.push({ path: "top" });
+    },
+  },
   head () {
     return {
       link: [
@@ -56,34 +84,6 @@ export default {
         },
       ],
     };
-  },
-  components: {
-    Layout,
-    GearPath,
-  },
-  data () {
-    return {
-      showText: false,
-    };
-  },
-  computed: {
-    pathAttrs () {
-      return {
-        "data-delay": 10,
-        "data-duration": 100,
-        fill: "none",
-        stroke: "#d2b316",
-      };
-    },
-  },
-  methods: {
-    async onCompleteGearPathAnimation () {
-      this.showText = true;
-
-      await new Promise((r) => setTimeout(r, 1300));
-
-      this.$router.push({ path: "top" });
-    },
   },
 };
 </script>
